@@ -8,12 +8,31 @@ odoo:
   merges:
     - origin ${ODOO_VERSION}
 
-
-OCA/l10n-netherlands:
+OCA/account-financial-reporting:
   defaults:
     depth: ${WAFT_DEPTH_DEFAULT}
   remotes:
+    origin: https://github.com/OCA/account-financial-reporting
+  target: origin ${ODOO_VERSION}
+  merges:
+    - origin ${ODOO_VERSION}
+
+OCA/l10n-netherlands:
+  defaults:
+    depth: ${WAFT_DEPTH_MERGE}
+  remotes:
     origin: https://github.com/OCA/l10n-netherlands.git
+    therp: https://github.com/Therp/l10n-netherlands.git
+  target: origin ${ODOO_VERSION}
+  merges:
+    - origin ${ODOO_VERSION}
+    - therp 19.0-mig-10n_nl_tax_statement
+
+OCA/reporting-engine:
+  defaults:
+    depth: ${WAFT_DEPTH_DEFAULT}
+  remotes:
+    origin: https://github.com/OCA/reporting-engine.git
   target: origin ${ODOO_VERSION}
   merges:
     - origin ${ODOO_VERSION}
