@@ -17,6 +17,15 @@ OCA/account-financial-reporting:
   merges:
     - origin ${ODOO_VERSION}
 
+OCA/account-reconcile:
+  defaults:
+    depth: ${WAFT_DEPTH_DEFAULT}
+  remotes:
+    origin: https://github.com/OCA/account-reconcile
+  target: origin ${ODOO_VERSION}
+  merges:
+    - origin ${ODOO_VERSION}
+
 OCA/bank-statement-import:
   defaults:
     depth: ${WAFT_DEPTH_DEFAULT}
