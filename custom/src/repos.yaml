@@ -28,12 +28,14 @@ OCA/account-reconcile:
 
 OCA/bank-statement-import:
   defaults:
-    depth: ${WAFT_DEPTH_DEFAULT}
+    depth: ${WAFT_DEPTH_MERGE}
   remotes:
     origin: https://github.com/OCA/bank-statement-import
+    therp: https://github.com/Therp/bank-statement-import
   target: origin ${ODOO_VERSION}
   merges:
     - origin ${ODOO_VERSION}
+    - therp 19.0-fix-camt-empty-node-text
 
 OCA/l10n-netherlands:
   defaults:
