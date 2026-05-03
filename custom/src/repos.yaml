@@ -66,6 +66,15 @@ OCA/server-tools:
   merges:
     - origin ${ODOO_VERSION}
 
+OCA/server-ux:
+  defaults:
+    depth: ${WAFT_DEPTH_DEFAULT}
+  remotes:
+    origin: https://github.com/OCA/server-ux.git
+  target: origin ${ODOO_VERSION}
+  merges:
+    - origin ${ODOO_VERSION}
+
 OCA/web:
   defaults:
     depth: ${WAFT_DEPTH_DEFAULT}
